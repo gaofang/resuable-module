@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+		.mybody{
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<input type="button" value="button" id="btn">
+	<input type="button" value="button1" id="btn1">
+	<script src="event.js"> </script>
+	<script src="toggleclass.js"> </script>
+	<script>
+	var btn=document.getElementById('btn');
+	eventUtil.addHandler(btn,"click",showmsg);
+	function showmsg(){
+		alert("gaga");
+	}
+	// eventUtil.removeHandler(btn,"click",showmsg);
+	body=document.body;
+	btn1=document.getElementById('btn1');
+	eventUtil.addHandler(btn1,'click',changecolor);
+	function changecolor(){
+		cssBind.toggleClass(body,'mybody');
+	}
+	</script>
+</body>
+</html>
